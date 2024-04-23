@@ -8,8 +8,11 @@
 ### 새로 배운 내용
 #### 주제 1: git & github 실습
 - git 미니 퀘스트 진행하기
+- Organization에서 PR 보내기
+- main branch에 sub1, sub2 branch 병합하기
+  : branch 사용 능력 획득 ^,^
 
-#### 주제 2: 주제에 대한 설명
+#### 주제 2: [로그인 페이지] fetch로 json에서 user정보 가져와서 조회하기
 - 상세 내용 1
 - 상세 내용 2
 
