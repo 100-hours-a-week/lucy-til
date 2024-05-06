@@ -1,0 +1,32 @@
+# TIL Template
+
+## 날짜: 2024-05-06
+
+### 새로 배운 내용
+#### 주제 1: 리액트 폴더구조 (4주차 2번 과제)
+https://www.notion.so/goorm/2-49fd0a814a59461e8fb9d8abbfca48d7?pvs=4
+
+#### 주제 2: 페이지 라우팅
+- 라우팅 : 네트워크에서 경로를 선택하는 프로세스 
+1. 우선, React Router를 설치 
+ npm install react-router-dom -> package.json에 설치된 것을 확인
+2. index.js 파일에서 최상위 컴포넌트인 APP을 react router의 내부 컴포넌트인 <BrowserRouter>로 감싸주기
+3. 컴포넌트에 Route로 라우팅 하기 : App.js에서 <Route path="/url경로"><컴포넌트/><Route/>
+ Route 컴포넌트에는 path prop를 설정해주어야함
+ Path prop은 문자열로 값을 가지고 Route의 내부 컴포넌트들을 렌더링할 조건인 url 경로를 의미
+
+### 오늘의 도전 과제와 해결 방법
+- 오류 : history.ts:494 Uncaught Error: [Login] is not a <Route> component. All component children of <Routes> must be a <Route> or <React.Fragment>
+   ㄴ 해결 : 처음에 <Route path="/url경로"><컴포넌트/><Route/>로 작성했으나 React Routeer DOM v6에서는 Route 안에 element={<컴포넌트/>}로 작성해서 사용해야함
+         <Routes>
+           <Route path="/" element={<Login />} />
+         </Routes>
+           그리고 컴포넌트에 return 넣어주기 ㄱ- 왜 계속 빈화면만 나오지 햇네
+
+- 오류와 해결 : 리액트에서는 class를 className으로 작성해줘야함
+- 오류와 해결 : label 태그 사용시 for 대신 htmlFor로 작성해줘야함
+
+### 오늘의 회고
+- 리액트가 확실히 편하다는 걸 느꼇다... 근데 기능 구현은 또 막막하네
+- 리액트에서 css가 충돌한다면 어떤 게 우선적으로 적용되는지 궁금해졌다
+- 지금은 css를 import 해서 사용중이지만 나중에 scss로 변경해보기 
